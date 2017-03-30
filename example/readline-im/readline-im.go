@@ -5,12 +5,12 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/chzyer/readline"
+	"github.com/heppu/rawterm"
 )
 import "log"
 
 func main() {
-	rl, err := readline.NewEx(&readline.Config{
+	rl, err := rawterm.NewEx(&rawterm.Config{
 		UniqueEditLine: true,
 	})
 	if err != nil {
@@ -23,7 +23,6 @@ func main() {
 	if err != nil {
 		return
 	}
-	rl.ResetHistory()
 	log.SetOutput(rl.Stderr())
 
 	fmt.Fprintln(rl, "Hi,", username+"! My name is Dave.")

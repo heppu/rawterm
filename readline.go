@@ -15,7 +15,7 @@
 // 		println(line)
 // 	}
 //
-package readline
+package rawterm
 
 import "io"
 

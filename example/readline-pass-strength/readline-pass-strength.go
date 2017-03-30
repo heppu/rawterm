@@ -1,7 +1,3 @@
-// This is a small example using readline to read a password
-// and check it's strength while typing using the zxcvbn library.
-// Depending on the strength the prompt is colored nicely to indicate strength.
-//
 // This file is licensed under the WTFPL:
 //
 //         DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
@@ -22,7 +18,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/chzyer/readline"
+	"github.com/heppu/rawterm"
 	zxcvbn "github.com/nbutton23/zxcvbn-go"
 )
 
@@ -80,7 +76,7 @@ func createStrengthPrompt(password []rune) string {
 }
 
 func main() {
-	rl, err := readline.New("")
+	rl, err := rawterm.New("")
 	if err != nil {
 		return
 	}

@@ -1,4 +1,4 @@
-package readline
+package rawterm
 
 type opPassword struct {
 	o         *Operation

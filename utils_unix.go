@@ -1,6 +1,6 @@
 // +build darwin dragonfly freebsd linux,!appengine netbsd openbsd
 
-package readline
+package rawterm
 
 import (
 	"io"
