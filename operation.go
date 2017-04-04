@@ -69,6 +69,10 @@ func NewOperation(t *Terminal, cfg *Config) *Operation {
 	return op
 }
 
+func (o *Operation) SetBuf(s string) {
+	o.buf.WriteString(s)
+}
+
 func (o *Operation) SetPrompt(s string) {
 	o.buf.SetPrompt(s)
 }
